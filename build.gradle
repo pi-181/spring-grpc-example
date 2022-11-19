@@ -1,0 +1,22 @@
+plugins {
+    id 'idea'
+    id 'java'
+    id 'application'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+application {
+    mainClass = 'com.demkom58.spring_grpc_example.SpringGrpcExampleApplication'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.13.1.RELEASE'
+    implementation project(':mod-interfaces')
+}
